@@ -21,16 +21,14 @@
       
     }
 
-    .plan-features{
-      list-style: none;
-      padding: 0;
-    }
+    
 
     .pricing-plan{
       background-color: rgba(220, 220, 220, 0.403);
       border-radius: 25px;
-      padding: 20px;
-      
+      padding: 30px;
+      max-width: 400px;
+      flex: 1;
     }
 
     .plan-title{
@@ -41,26 +39,34 @@
     .plan-price{
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: bold;
-      font-size: 25px;
+      font-size: 40px;
+      flex: 1;
+    }
+
+    .plan-features{
+      list-style: none;
+      padding: 0;
     }
 
     .plan-button{
       transition-duration: 0.4s;
       background-color: #ffaf0350;
-      border: 0px;
-      border-radius: 25%;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
     }
 
-.plan-button:hover {
-  background-color: #ffaf03; 
-  color: white;
-}
+    .plan-button:hover {
+      background-color: #ffaf03; 
+      color: white;
+    }
 
     /* Hint: What can you do with a media query and flexbox? */
     @media (max-width: 1250px) {
       .pricing-container {
         flex-direction: column;
         height: 100%;
+    
       }
     }
   </style>
