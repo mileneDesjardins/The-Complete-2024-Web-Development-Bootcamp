@@ -1,5 +1,7 @@
-document.querySelector("button").addEventListener("click", handleClick);
+var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
-function handleClick() {
-  alert("i got clicked");
+for (var i = 0; i < numberOfDrumButtons; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+    alert("i got clicked");
+  });
 }
