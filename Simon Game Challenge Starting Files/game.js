@@ -21,9 +21,20 @@ $(".btn").click(function (event) {
   userClickedPattern.push(userChosenColour);
   console.log(userClickedPattern);
   playSound(userChosenColour);
+  animatePress(userChosenColour);
 });
 
 function playSound(name) {
   var colorAudio = new Audio("sounds/" + name + ".mp3");
   colorAudio.play();
+}
+
+function animatePress(currentColour) {
+  $("#" + currentColour)
+    .addClass("pressed")
+    .dequeue()
+    .delay(100)
+    .queue(function () {
+      $(this).removeClass("pressed");
+    });
 }
