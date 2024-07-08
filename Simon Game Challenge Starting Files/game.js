@@ -13,12 +13,17 @@ function nextSequence() {
     $(this).fadeTo(500, 1.0);
   });
 
-  var colorAudio = new Audio("sounds/" + randomChosenColour + ".mp3");
-  colorAudio.play();
+  playSound(randomChosenColour);
 }
 
 $(".btn").click(function (event) {
   var userChosenColour = event.target.id;
   userClickedPattern.push(userChosenColour);
   console.log(userClickedPattern);
+  playSound(userChosenColour);
 });
+
+function playSound(name) {
+  var colorAudio = new Audio("sounds/" + name + ".mp3");
+  colorAudio.play();
+}
