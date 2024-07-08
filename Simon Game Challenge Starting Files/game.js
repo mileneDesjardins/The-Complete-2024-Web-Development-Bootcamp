@@ -36,6 +36,13 @@ function checkAnswer(currentLevel) {
     }
   } else {
     console.log("wrong");
+    var name = "wrong";
+    playSound(name);
+
+    $("body").addClass("game-over");
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
   }
 }
 
@@ -56,8 +63,8 @@ function nextSequence() {
 }
 
 function playSound(name) {
-  var colorAudio = new Audio("sounds/" + name + ".mp3");
-  colorAudio.play();
+  var audio = new Audio("sounds/" + name + ".mp3");
+  audio.play();
 }
 
 function animatePress(currentColor) {
